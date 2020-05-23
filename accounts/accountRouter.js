@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.get('/', async (req, res) => {
     try {
-        const accounts = await knex('accounts');
+        const accounts = await knex('accounts')
         res.status(200).json(accounts);
     } catch (err) {
         console.log(err);
